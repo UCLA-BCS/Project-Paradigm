@@ -122,4 +122,41 @@ module.exports = function (app) {
         res.json(err);
       });
   });
+
+  // Takes one user and initiates a friendship with another user.
+  // Uses the user IDs of both users to do this.
+  app.post("/friend/:userOne/:userTwo", function (req, res) {
+    var userOne = req.params.userOne;
+    var userTwo = req.params.userTwo;
+
+    db.SiteFriends.create({
+      friendInitiator: userOne,
+      friendReceiver: userTwo,
+    })
+      .then(function (bestow_db) {
+        res.json(bestow_db);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
+
+  // Deletes a friendship given the ids of two users
+  app.delete("/delete-friend/:userOne/:userTwo", function (req, res) {
+    var userOne = req.params.userOne;
+    var userTwo = req.params.userTwo;
+
+    db.SiteDrink.destroy({
+      where: {
+        friendInitiator: userOne,
+        friendReceiver: userTwo,
+      },
+    })
+      .then(function (bestow_db) {
+        res.json(bestow_db);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
 };
