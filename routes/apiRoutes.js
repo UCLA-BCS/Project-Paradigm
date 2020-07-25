@@ -159,4 +159,17 @@ module.exports = function (app) {
         res.json(err);
       });
   });
+
+  // Returns all frieds of the userID given
+  app.get("/get-friends/:userID", function (req, res) {
+    var userID = req.params.userID;
+
+    db.SiteFriends.findAll({
+      where: {
+        friendInitiator: userID,
+      },
+    }).then(function (bestow_db) {
+      res.json(bestow_db);
+    });
+  });
 };
