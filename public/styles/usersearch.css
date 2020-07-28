@@ -1,0 +1,18 @@
+body {
+    background-color: #feddaf;
+    background: url(./images/coffeebeans.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+  
+  .bestowDiv {
+    background-color: #f5ab08;
+    padding: 20px;
+    width: 100%;
+    border: 8px white solid;
+    text-align: center;
+    box-shadow: 0 0 8px 2px #ffffff;
+  }
+  
