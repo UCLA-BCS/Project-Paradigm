@@ -1,0 +1,137 @@
+/* ------------------------------------------------ */
+/* Splash page */
+
+.bestowDiv {
+    background-color:#f5ab08;;
+    padding: 20px;
+    width: 100%;
+    border: 8px white solid;
+    text-align: center;
+    box-shadow: 0 0 8px 2px #ffffff;
+}
+
+
+body{
+    font-family: sans-serif;
+	height:100vh;
+	min-height:550px;
+    background: url(./images/coffeebeans.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a{
+    text-decoration:none;
+    color:#444444;
+}
+
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align:center;
+    width:50%;
+    right:0;left:0;
+    margin: 300px;
+    height:400px;
+    background-color: rgba(236, 48, 20, 0.9);
+}
+
+.white-panel{
+    background-color: rgba(255,255, 255, 1);
+    height:400px;
+    position:absolute;
+    padding-top: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    top:-50px;
+    width:45%;
+    right:calc(50% - 50px);
+    transition:.3s ease-in-out;
+    z-index:0;
+    box-shadow: 0 0 15px 9px #00000096;
+    color:#444444
+}
+
+.login-reg-panel input[type="radio"]{
+    position:relative;
+    display:none;
+}
+  
+/* .login-reg-panel{
+    color:#3d3939;
+} */
+
+.login-reg-panel #label-login {
+    border:1px solid #9E9E9E;
+    padding:5px 5px;
+    width:150px;
+    display:block;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.login-info-box{
+      width:30%;
+      padding:0 50px;
+      top:20%;
+      left:0;
+      position:absolute;
+      text-align:left;
+}
+  
+.register-info-box{
+      width:30%;
+      padding:0 50px;
+      top:20%;
+      right:0;
+      position:absolute;
+      text-align:left;
+      
+}
+
+.register-info-box #label-login {
+    background: #f9f9f9;
+
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+      width: 90%;
+      display: block;
+      margin:20px 0;
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #b5b5b5;
+      outline: none;
+      color: #444444;
+}
+  
+.login-show input[type="button"] {
+      max-width: 150px;
+      width: 80%;
+      background: #444444;
+      color: #f9f9f9;
+      border: none;
+      padding: 10px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      float:right;
+      cursor:pointer;
+      margin-right: 10px;
+}
+  
+.whyB{
+    text-align: center;
+    border: 8px black solid;
+    background-color: white;
+    margin-left: 10%;
+    width: 300px;
+    margin-left: 40%;
+    margin-top: 3%;
+  
+  }
