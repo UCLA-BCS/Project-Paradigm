@@ -7,33 +7,33 @@ const { expect } = require('chai');
 chai.use(chaiHttp);
 
 // siteUsers
-// describe('Inputting x3 users into database', function() {
-//     var host = "http://localhost:3000";
-//     var path = "/users/add";
+describe('Inputting x3 users into database', function() {
+    var host = "http://localhost:3000";
+    var path = "/users/add";
 
-//     it('Users have been added to database', function(done) {
-//         chai
-//             .request(host)
-//             // will be creating a post request
-//             .post(path)
-//             // .send is json information for the post request
-//             .send({name: 'danver', password: "password", allergies: "nuts", dietaryRestrictions: "fish"})
-//             .send({name: 'datroit', password: "wordpass", allergies: "lactose", dietaryRestrictions: "meat"})
-//             .send({name: 'daver', password: "passingword", allergies: "msg", dietaryRestrictions: "gluten"})
-//             .then(function (res) {
-//               expect(res).to.have.status(200);
-//               done();
-//             })
-//             .catch(function (err) {
-//               throw err;
-//             });
-//     });
-// });
+    it('Users have been added to database', function(done) {
+        chai
+            .request(host)
+            // will be creating a post request
+            .post(path)
+            // .send is json information for the post request
+            .send({name: 'danver', password: "password", allergies: "nuts", dietaryRestrictions: "fish"})
+            .send({name: 'datroit', password: "wordpass", allergies: "lactose", dietaryRestrictions: "meat"})
+            .send({name: 'daver', password: "passingword", allergies: "msg", dietaryRestrictions: "gluten"})
+            .then(function (res) {
+              expect(res).to.have.status(200);
+              done();
+            })
+            .catch(function (err) {
+              throw err;
+            });
+    });
+});
 
 // siteDrinks
 describe('Inputting x3 drinks into database', function() {
   var host = "http://localhost:3000";
-  var path = "/users/add-drinks/:userID";
+  var path = "/users/add-drinks/1";
 
   it('Drinks have been added to database', function(done) {
       chai
@@ -42,14 +42,18 @@ describe('Inputting x3 drinks into database', function() {
           .post(path)
           // .send is json information for the post request
           .send({owner: 1, coffeeShop: "Starbucks", isHot: true, drinkName: "Hot Mocha Chai Latte", specialInstructions: "no nuts, extra whipped cream"})
+          .send({owner: 1, coffeeShop: "Pete's", isHot: false, drinkName: "Iced Horchata Latte", specialInstructions: "oat milk"})
           
           .then(function (res) {
             expect(res).to.have.status(200);
+            // expect(res).body.user.add-drinks.should.have.property('isHot');
             done();
+
           })
           .catch(function (err) {
             throw err;
           });
+
   });
 });
 
