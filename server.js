@@ -1,11 +1,11 @@
 require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
+const db = require("./models");
 
-var db = require("./models");
-
-var app = express();
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+const app = express();
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -21,6 +21,21 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+// Session cookie
+app.use(
+  session({
+    name: "sid",
+    saveUninitialized: false,
+    resave: false,
+    secret: process.env.SECRET_KEY,
+    cookie: {
+      maxAge: 28800000,
+      sameSite: true,
+      secure: process.env.NODE_ENV === "production",
+    },
+  })
+);
+
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
@@ -34,8 +49,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function () {
-  app.listen(PORT, function () {
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
