@@ -108,6 +108,27 @@ module.exports = function(app) {
     });
   });
 
+  // Adds drink with the userID given
+  // DO NOT USE USER NAME (get drinks function searches by ID)
+  app.post("/users/add-drinks", function(req, res) {
+    var queryUser = req.session.userId;
+
+    db.SiteDrink.create({
+      owner: queryUser,
+      coffeeShop: req.body.coffeeShop,
+      isHot: req.body.isHot.value,
+      drinkName: req.body.drinkName,
+      specialInstructions: req.body.specialInstructions,
+    })
+      .then(function(bestow_db) {
+        console.log(bestow_db);
+        res.redirect("/dashboard");
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
