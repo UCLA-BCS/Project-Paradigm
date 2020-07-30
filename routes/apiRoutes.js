@@ -12,9 +12,17 @@ module.exports = function(app) {
     });
   });
 
-  // Gives you the current user id
-  app.get("/curr-user-id", function(req, res) {
-    res.json(req.session.userId);
+  // Get Json object of things related to the active user
+  app.get("/user/get-info", function(req, res) {
+    var queryUser = req.session.userId;
+
+    db.SiteUser.findAll({
+      where: {
+        id: queryUser,
+      },
+    }).then(function(bestow_db) {
+      res.json(bestow_db);
+    });
   });
 
   // Deletes a user given the id
@@ -36,8 +44,8 @@ module.exports = function(app) {
 
   // Searches for all drinks associated with the user in question
   // Requires userID--not user name
-  app.get("/users/drinks/:userID", function(req, res) {
-    var queryUser = req.params.userID;
+  app.get("/users/drinks", function(req, res) {
+    var queryUser = req.session.userId;
 
     db.SiteDrink.findAll({
       where: {
@@ -82,26 +90,6 @@ module.exports = function(app) {
         },
       }
     )
-      .then(function(bestow_db) {
-        res.json(bestow_db);
-      })
-      .catch(function(err) {
-        res.json(err);
-      });
-  });
-
-  // Adds drink with the userID given
-  // DO NOT USE USER NAME (get drinks function searches by ID)
-  app.post("/users/add-drinks/:userID", function(req, res) {
-    var queryUser = req.params.userID;
-
-    db.SiteDrink.create({
-      owner: queryUser,
-      coffeeShop: req.body.coffeeShop,
-      isHot: req.body.isHot,
-      drinkName: req.body.drinkName,
-      specialInstructions: req.body.specialInstructions,
-    })
       .then(function(bestow_db) {
         res.json(bestow_db);
       })
