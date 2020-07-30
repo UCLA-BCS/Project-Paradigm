@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestow Login</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 
+    <link rel="stylesheet" href="./styles/splash.css" />
+  </head>
 
-
-    <link rel="stylesheet" href="./styles/splash.css">
-
-
-</head>
-
-<body>
+  <body>
     <div class="navbar">
-        <div class="bestowDiv">
-            <!-- <div class="bestowText"><b>Bestow</b></div> -->
-            <img src="./styles/images/bestow1.png" alt="...">
-        </div>
+      <div class="bestowDiv">
+        <!-- <div class="bestowText"><b>Bestow</b></div> -->
+        <img src="./styles/images/bestow1.png" alt="..." />
+      </div>
+      <div id="userLogNav"></div>
     </div>
 
-    
     <div class="container wrapper1 mt-5">
-        <div class="row ">
-            <div class="col-md-12">
-                <div class="whyB">
-                    <div class="drinks d-flex justify-content-center">
-                        <h3>Why Bestow?</h3>
-                    </div>
-                </div>
+      <div class="row ">
+        <div class="col-md-12">
+          <div class="whyB">
+            <div class="drinks d-flex justify-content-center">
+              <h3>Why Bestow?</h3>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="row">
-            <div class="col-md-12"> 
-                <div class="login-reg-panel">
-                    <div class="login-info-box">
-                        <!-- <label id="label-register" for="log-reg-show">Login</label> -->
-                        <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
-                    </div>
-
-                    <div class="register-info-box">
-                        <h2>Don't have an account?</h2>
-                        <p>Sign up to log your favorite drinks and look up other users!</p>
-                        <label id="label-login" for="log-login-show">Sign Up</label>
-                        <input type="radio" name="active-log-panel" id="log-login-show">
-                    </div>
-
-                    <div class="white-panel">
-                        <div class="login-show">
-                            <h2>Login</h2>
-                            <p>Sign in to log your favorite drinks!</p>
-                            <input type="text" placeholder="Email">
-                            <input type="password" placeholder="Password">
-                            <input type="button" value="Login">
-                        </div>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="login-reg-panel">
+            <div class="login-info-box">
+              <!-- <label id="label-register" for="log-reg-show">Login</label> -->
+              <input
+                type="radio"
+                name="active-log-panel"
+                id="log-reg-show"
+                checked="checked"
+              />
             </div>
-        </div>   
-    </div>         
-    <script src="js/index.js"></script>
 
-</body>
+            <div class="register-info-box">
+              <h2>Don't have an account?</h2>
+              <p>
+                Sign up to log your favorite drinks and look up other users!
+              </p>
+              <label id="label-login" for="log-login-show">Sign Up</label>
+              <input type="radio" name="active-log-panel" id="log-login-show" />
+            </div>
+
+            <div class="white-panel">
+              <div class="login-show">
+                <form action="/login" method="POST">
+                  <h2>Login</h2>
+                  <p>Sign in to log your favorite drinks!</p>
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    name="username"
+                    id="username"
+                    required
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    id="password"
+                  />
+                  <input type="submit" value="Login" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--JS Controller-->
+    <script src="js/index.js"></script>
+  </body>
 </html>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bestow Profile</title>
-    <!--JQuery-->
+    <title>Bestow Dashboard</title>
+    <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--Bootstrap-->
     <link
@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
   </head>
   <body>
     <div class="navbar">
@@ -23,6 +23,14 @@
         <img src="./styles/images/bestow1.png" alt="..." />
       </div>
     </div>
+    <div class="authNav">
+      <form action="/logout" method="POST">
+        <button id="logoutBtn" type="submit">
+          Logout
+        </button>
+      </form>
+    </div>
+    <div style="color: white;"><h1>Dashboard</h1></div>
     <!--JS Controller-->
     <script src="js/index.js"></script>
   </body>
