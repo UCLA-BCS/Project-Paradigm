@@ -83,7 +83,7 @@ body {
   height: 200px;
   width: 600px;
   border: 8px black solid;
-  margin-left: 100%;
+  /* margin-left: 100%; */
   background-color: rgba(255, 255, 255, 1);
   right: calc(50% - 50px);
   transition: 0.3s ease-in-out;
@@ -123,4 +123,10 @@ td {
   opacity: 1;
   box-shadow: 0 0 4px 2px #ffffff;
   transition-duration: 1.2s;
+}
+#userNameGoesHere{
+margin-top: 5px;
+}
+.inputOndash{
+  width: 90%;
 }
