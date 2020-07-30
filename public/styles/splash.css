@@ -15,7 +15,7 @@ body{
     font-family: sans-serif;
 	height:100vh;
 	min-height:550px;
-    background: url(./images/coffeebeans.jpg) no-repeat center center fixed;
+    background: url(./images/highrescup.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -36,7 +36,7 @@ a{
     right:0;left:0;
     margin: 300px;
     height:400px;
-    background-color: rgba(236, 48, 20, 0.9);
+    background-color:#f5aa0867;;
 }
 
 .white-panel{
