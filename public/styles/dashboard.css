@@ -1,10 +1,10 @@
 body {
   background-color: #feddaf;
   background: url(./images/highrescup.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .bestowDiv {
@@ -16,7 +16,7 @@ body {
   box-shadow: 0 0 8px 2px #ffffff;
 }
 
-.coffeeShops{
+.coffeeShops {
   text-align: center;
   border: 8px black solid;
   background-color: white;
@@ -26,19 +26,18 @@ body {
   width: 300px;
   height: 400px;
   margin-top: 15%;
-  background-color: rgba(255,255, 255, 1);
-  right:calc(50% - 50px);
-  transition:.3s ease-in-out;
-  z-index:0;
+  background-color: rgba(255, 255, 255, 1);
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
   box-shadow: 0 0 15px 9px #00000096;
-
 }
 
-.user{
+.user {
   height: 200px;
   width: 300px;
 }
-.profile{
+.profile {
   text-align: center;
   border: 8px black solid;
   margin-left: 15%;
@@ -46,40 +45,36 @@ body {
   height: 170px;
   margin-left: 20%;
   margin-top: 10%;
-  background-color: rgba(255,255, 255, 1);
-  right:calc(50% - 50px);
-  transition:.3s ease-in-out;
-  z-index:0;
+  background-color: rgba(255, 255, 255, 1);
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
   box-shadow: 0 0 15px 9px #00000096;
- 
-
 }
 
-.hot{
+.hot {
   display: inline-block;
   height: 200px;
   width: 250px;
   border: 8px black solid;
   margin-left: 70%;
-  background-color: rgba(255,255, 255, 1);
-  right:calc(50% - 50px);
-  transition:.3s ease-in-out;
-  z-index:0;
+  background-color: rgba(255, 255, 255, 1);
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
   box-shadow: 0 0 15px 9px #00000096;
- 
-  
 }
 
-.cold{
+.cold {
   display: inline-block;
   height: 200px;
   width: 240px;
   border: 8px black solid;
   margin-left: 70%;
-  background-color: rgba(255,255, 255, 1);
-  right:calc(50% - 50px);
-  transition:.3s ease-in-out;
-  z-index:0;
+  background-color: rgba(255, 255, 255, 1);
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
   box-shadow: 0 0 15px 9px #00000096;
 }
 
@@ -89,18 +84,41 @@ body {
   width: 600px;
   border: 8px black solid;
   margin-left: 100%;
-  background-color: rgba(255,255, 255, 1);
-  right:calc(50% - 50px);
-  transition:.3s ease-in-out;
-  z-index:0;
-  box-shadow: 0 0 15px 9px #00000096;  
+  background-color: rgba(255, 255, 255, 1);
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+  box-shadow: 0 0 15px 9px #00000096;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   width: 150px;
+}
+
+navLogout {
+  text-align: right;
+}
+
+#logoutButton {
+  opacity: 0.6;
+  margin-right: 10vw;
+  background-color: #f5ab08;
+  padding: 10px;
+  border: 2px white solid;
+  text-align: center;
+  box-shadow: 0 0 2px 2px #ffffff;
+  transition-duration: 1.2s;
+}
+
+#logoutButton:hover {
+  opacity: 1;
+  box-shadow: 0 0 4px 2px #ffffff;
+  transition-duration: 1.2s;
 }
