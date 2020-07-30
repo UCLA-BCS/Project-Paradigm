@@ -102,6 +102,10 @@ td {
   width: 150px;
 }
 
+.navLogOut {
+  width: 100%;
+}
+
 #logoutButton {
   position: relative;
   float: right;
