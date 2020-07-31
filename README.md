@@ -26,19 +26,21 @@ With more funding, we hope to add:
 ## Database used
 
 - MySQL
+- JawsDB
 
 ## Languages Used
 
 - HTML
 - CSS (Bootstrap)
 - Javascript (Jquery)
+- MySQL
 
 ## Team Tasks
 
 _Michael_ Original layout and design, Front end styling
 
-_Juliana_ Original conecept, Front end styling, responsiveness, project management, README, Git assistance
+_Juliana_ Original concept, Front end styling, responsiveness, project management, README, Git assistance
 
-_Mark_ Back end, 
+_Mark_ Back end, Authentication, Sessions, API Routes, Ajax calls, Database hook up
 
-_Hazel_ Back end, 
+_Hazel_ Back end, Mocha Chai tests, Ajax calls, API Routes, 
